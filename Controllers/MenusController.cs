@@ -29,7 +29,7 @@ namespace UdemyCourse_WebApiCoffeeShop.Controllers
             var menu = await _context.Menus.Include(x => x.SubMenus).FirstOrDefaultAsync(x => x.Id == id);
             if (menu == null)
             {
-                return NotFound("Menu not found");
+                return NotFound("Menu not found at all");
             }
 
             return Ok(menu);
